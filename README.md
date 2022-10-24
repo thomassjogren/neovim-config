@@ -1,4 +1,4 @@
 # neovim-config
 Configuration for Neovim
 
-Clone into 
+Clone into ~/.config/nvim/
