@@ -64,8 +64,8 @@ cmp.setup({
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" }, -- lsp
 		{ name = "luasnip" }, -- snippets
-		{ name = "buffer" }, -- text within current buffer
 		{ name = "path" }, -- file system paths
+		{ name = "buffer", keyword_length = 3 }, -- text within current buffer
 	}),
 	-- configure lspkind for vs-code like icons
 	formatting = {
@@ -73,5 +73,12 @@ cmp.setup({
 			maxwidth = 50,
 			ellipsis_char = "...",
 		}),
+	},
+	experimental = {
+		-- Some new menu?
+		native_menu = false,
+
+		-- Display inline text when autocompletion
+		ghost_text = true,
 	},
 })
