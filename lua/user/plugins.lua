@@ -44,7 +44,7 @@ return packer.startup(function(use)
 	-- Themes
 	use("kyazdani42/nvim-web-devicons") -- Icons
 	use("arcticicestudio/nord-vim") -- Nord theme
-	use("NTBBloodbath/galaxyline.nvim")
+	use("nvim-lualine/lualine.nvim")
 
 	-- Completion, Snippets
 	use("hrsh7th/nvim-cmp") -- The completion plugin
