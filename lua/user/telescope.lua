@@ -103,6 +103,15 @@ telescope.setup({
 
 local M = {}
 
+function M.nvim_config()
+	require("telescope.builtin").find_files({
+		prompt_title = " NVim Config Browse",
+		cwd = "~/.config/nvim/",
+		layout_strategy = "horizontal",
+		layout_config = { preview_width = 0.65, width = 0.75 },
+	})
+end
+
 M.project_files = function()
 	local opts = {} -- define here if you want to define something
 	local ok = pcall(require("telescope.builtin").git_files, opts)

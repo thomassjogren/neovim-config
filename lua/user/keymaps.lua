@@ -50,6 +50,7 @@ keymap("n", "<leader>fb", ":lua require('telescope.builtin').buffers()<cr>", opt
 keymap("n", "<leader>fh", ":lua require('telescope.builtin').help_tags()<cr>", opts)
 keymap("n", "<leader>p", ":lua require('telescope.builtin').find_files()<cr>", opts)
 keymap("n", "<C-p>", ":lua require('telescope.builtin').find_files()<cr>", opts)
+keymap("n", "<leader>nc", ":lua require('user.telescope').nvim_config()<cr>", opts)
 
 -- Terminal
 keymap("n", "<leader>tt", ":ToggleTerm<cr>", opts)

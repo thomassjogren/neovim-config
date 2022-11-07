@@ -24,23 +24,24 @@ local on_attach = function(client, bufnr)
 	local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
 	-- set keybinds
-	keymap("n", "gf", ":Lspsaga lsp_finder<CR>", bufopts) -- show definition, references
-	keymap("n", "gD", ":lua vim.lsp.buf.declaration()<CR>", bufopts) -- got to declaration
-	keymap("n", "gd", ":Lspsaga peek_definition<CR>", bufopts) -- see definition and make edits in window
-	keymap("n", "gi", ":lua vim.lsp.buf.implementation()<CR>", bufopts) -- go to implementation
-	keymap("n", "<leader>ca", ":Lspsaga code_action<CR>", bufopts) -- see available code actions
-	keymap("n", "<leader>rn", ":Lspsaga rename<CR>", bufopts) -- smart rename
-	keymap("n", "<leader>d", ":Lspsaga show_line_diagnostics<CR>", bufopts) -- show  diagnostics for line
-	keymap("n", "<leader>d", ":Lspsaga show_cursor_diagnostics<CR>", bufopts) -- show diagnostics for cursor
-	keymap("n", "<d", ":Lspsaga diagnostic_jump_prev<CR>", bufopts) -- jump to previous diagnostic in buffer
-	keymap("n", ">d", ":Lspsaga diagnostic_jump_next<CR>", bufopts) -- jump to next diagnostic in buffer
-	keymap("n", "K", ":Lspsaga hover_doc<CR>", bufopts) -- show documentation for what is under cursor
+	keymap("n", "gf", "<cmd>Lspsaga lsp_finder<cr>", bufopts) -- show definition, references
+	keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", bufopts) -- got to declaration
+	keymap("n", "gd", "<cmd>Lspsaga peek_definition<cr>", bufopts) -- see definition and make edits in window
+	keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<cr>", bufopts) -- go to implementation
+	keymap("n", "<leader>ca", "<cmd>Lspsaga code_action<cr>", bufopts) -- see available code actions
+	keymap("n", "<leader>rn", "<cmd>Lspsaga rename<cr>", bufopts) -- smart rename
+	keymap("n", "<leader>d", "<cmd>Lspsaga show_line_diagnostics<cr>", bufopts) -- show  diagnostics for line
+	keymap("n", "<leader>d", "<cmd>Lspsaga show_cursor_diagnostics<cr>", bufopts) -- show diagnostics for cursor
+	keymap("n", "<leader>dk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", bufopts) -- jump to previous diagnostic in buffer
+	keymap("n", "<leader>dj", "<cmd>Lspsaga diagnostic_jump_next<cr>", bufopts) -- jump to next diagnostic in buffer
+	keymap("n", "<leader>dl", "<cmd>Telescope diagnostics<cr>", bufopts) -- jump to next diagnostic in buffer
+	keymap("n", "K", "<cmd>Lspsaga hover_doc<cr>", bufopts) -- show documentation for what is under cursor
 
 	-- typescript specific keymaps (e.g. rename file and update imports)
 	if client.name == "tsserver" then
-		keymap("n", "<leader>rf", ":TypescriptRenameFile<CR>") -- rename file and update imports
-		keymap("n", "<leader>oi", ":TypescriptOrganizeImports<CR>") -- organize imports (not in youtube nvim video)
-		keymap("n", "<leader>ru", ":TypescriptRemoveUnused<CR>") -- remove unused variables (not in youtube nvim video)
+		keymap("n", "<leader>rf", "<cmd>TypescriptRenameFile<cr>") -- rename file and update imports
+		keymap("n", "<leader>oi", "<cmd>TypescriptOrganizeImports<cr>") -- organize imports (not in youtube nvim video)
+		keymap("n", "<leader>ru", "<cmd>TypescriptRemoveUnused<cr>") -- remove unused variables (not in youtube nvim video)
 	end
 end
 
