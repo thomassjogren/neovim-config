@@ -37,14 +37,14 @@ return packer.startup(function(use)
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use("akinsho/toggleterm.nvim") -- Some terminal
 	use("lewis6991/impatient.nvim") -- Perf improvement
-	use("ur4ltz/surround.nvim")
-	use("lukas-reineke/indent-blankline.nvim")
-	use("nvim-tree/nvim-tree.lua")
-	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
+	use("ur4ltz/surround.nvim") -- Easily surround objects
+	use("lukas-reineke/indent-blankline.nvim") -- Display blank ling indentation guides
+	use("nvim-tree/nvim-tree.lua") -- Simple file explorer
+	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- Autoclose tags
 	-- Themes
 	use("kyazdani42/nvim-web-devicons") -- Icons
 	use("arcticicestudio/nord-vim") -- Nord theme
-	use("nvim-lualine/lualine.nvim") -- Line plugin where things are displayed
+	use("nvim-lualine/lualine.nvim") -- Bottom(status)line plugin where things are displayed
 
 	-- Completion, Snippets
 	use("hrsh7th/nvim-cmp") -- The completion plugin
@@ -53,38 +53,38 @@ return packer.startup(function(use)
 	use("saadparwaiz1/cmp_luasnip") -- snippet completions
 	use("L3MON4D3/LuaSnip") --snippet engine
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
-	use("hrsh7th/cmp-nvim-lsp")
-	use("hrsh7th/cmp-nvim-lua")
+	use("hrsh7th/cmp-nvim-lsp") -- Completion for LSP
+	use("hrsh7th/cmp-nvim-lua") -- Completion for Lua
 
 	-- LSP
-	use("williamboman/mason.nvim") -- simple to use language server installer
-	use("williamboman/mason-lspconfig.nvim") -- simple to use language server installer
-	use("neovim/nvim-lspconfig") -- enable LSP
-	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
-	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
-	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
+	use("williamboman/mason.nvim") -- Simple to use language server installer
+	use("williamboman/mason-lspconfig.nvim") -- Integration with LSP config
+	use("neovim/nvim-lspconfig") -- Enable and configure LSP
+	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- Enhanced LSP UIs
+	use("jose-elias-alvarez/typescript.nvim") -- Additional functionality for typescript server (e.g. rename file & update imports)
+	use("onsails/lspkind.nvim") -- VSCode like icons for autocompletion
 
-	-- formatting & linting
-	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
-	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+	-- Formatting & linting
+	use("jose-elias-alvarez/null-ls.nvim") -- Configure formatters & linters
+	use("jayp0521/mason-null-ls.nvim") -- Bridges gap b/w Mason & null-ls
 
 	-- Telescope
-	use("nvim-telescope/telescope.nvim")
-	use("nvim-telescope/telescope-fzy-native.nvim")
+	use("nvim-telescope/telescope.nvim") -- Fuzzy finder
+	use("nvim-telescope/telescope-fzy-native.nvim") -- Faster(?) engine?
 
 	-- Treesitter
 	use({
-		"nvim-treesitter/nvim-treesitter",
+		"nvim-treesitter/nvim-treesitter", -- Treesitter integration
 		run = ":TSUpdate",
 	})
-	use("p00f/nvim-ts-rainbow")
+	use("p00f/nvim-ts-rainbow") -- Display colors for things based on Treesitter
 
 	-- Git
-	use("lewis6991/gitsigns.nvim")
-	use("TimUntersberger/neogit")
+	use("lewis6991/gitsigns.nvim") -- Git diff in the gutter
+	use("TimUntersberger/neogit") -- Magit clone written for Neovim
 
 	use({
-		"nathom/filetype.nvim",
+		"nathom/filetype.nvim", -- Filetype bindings
 		config = function()
 			require("filetype").setup({
 				overrides = {
@@ -97,8 +97,6 @@ return packer.startup(function(use)
 			})
 		end,
 	})
-
-	-- use 'JoosepAlviste/nvim-ts-context-commentstring' -- TypeScript context comments
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

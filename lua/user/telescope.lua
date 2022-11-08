@@ -11,14 +11,13 @@ telescope.setup({
 	defaults = {
 		layout_config = {
 			prompt_position = "top",
-			-- width = 0.95,
-			-- height = 0.95,
 		},
 		sorting_strategy = "ascending",
 		file_sorter = require("telescope.sorters").get_fzy_sorter,
 
 		path_display = { "smart" },
 
+		-- Should not need all of these
 		mappings = {
 			i = {
 				["<C-n>"] = actions.cycle_history_next,
@@ -103,15 +102,15 @@ telescope.setup({
 
 local M = {}
 
+-- Search and find Neovim config files from anywhere
 function M.nvim_config()
 	require("telescope.builtin").find_files({
 		prompt_title = " NVim Config Browse",
 		cwd = "~/.config/nvim/",
-		layout_strategy = "horizontal",
-		layout_config = { preview_width = 0.65, width = 0.75 },
 	})
 end
 
+-- If it works with git_files, use that, else just find_files
 M.project_files = function()
 	local opts = {} -- define here if you want to define something
 	local ok = pcall(require("telescope.builtin").git_files, opts)

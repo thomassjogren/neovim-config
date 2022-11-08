@@ -9,6 +9,8 @@ lualine.setup({
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 	},
+
+	-- Quite minimal configuration of the sections
 	sections = {
 		lualine_a = {},
 		lualine_b = { "branch", "diff", "diagnostics" },

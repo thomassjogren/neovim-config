@@ -70,7 +70,7 @@ typescript.setup({
 	},
 })
 
--- Vuejs 3
+-- Vuejs 3 - conflicting with vuels when both running
 -- lspconfig["volar"].setup({
 --   capabilities = capabilities,
 --   on_attach = on_attach,
