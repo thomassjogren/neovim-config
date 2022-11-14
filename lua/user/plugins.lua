@@ -92,6 +92,7 @@ return packer.startup(function(use)
 						tf = "terraform",
 						tfvars = "terraform",
 						tfstate = "json",
+						hcl = "terraform",
 					},
 				},
 			})
