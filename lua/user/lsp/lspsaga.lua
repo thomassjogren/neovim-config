@@ -3,4 +3,4 @@ if not status then
 	return
 end
 
-saga.init_lsp_saga()
+saga.setup({})

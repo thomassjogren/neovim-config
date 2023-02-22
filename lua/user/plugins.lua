@@ -39,7 +39,13 @@ return packer.startup(function(use)
 	use("lewis6991/impatient.nvim") -- Perf improvement
 	use("ur4ltz/surround.nvim") -- Easily surround objects
 	use("lukas-reineke/indent-blankline.nvim") -- Display blank ling indentation guides
-	use("nvim-tree/nvim-tree.lua") -- Simple file explorer
+	use({
+		"nvim-tree/nvim-tree.lua", -- Simple file explorer
+		-- requires = {
+		--   'nvim-tree/nvim-web-devicons', -- optional, for file icons
+		-- },
+		tag = "nightly", -- optional, updated every week. (see issue #1193)
+	})
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- Autoclose tags
 	-- Themes
 	use("kyazdani42/nvim-web-devicons") -- Icons
