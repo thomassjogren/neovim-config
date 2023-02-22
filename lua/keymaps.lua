@@ -2,10 +2,6 @@ local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 local keymap = vim.keymap.set
 
-keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 keymap("n", "<leader><Space>", ":nohlsearch<cr>", opts)
 
 -- Window navigation
