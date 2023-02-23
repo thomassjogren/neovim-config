@@ -7,7 +7,7 @@ return {
 			vim.cmd([[colorscheme nord]])
 		end,
 	},
-	"kyazdani42/nvim-web-devicons", -- Some icons
+	"nvim-tree/nvim-web-devicons", -- Some icons
 	"nvim-lualine/lualine.nvim", -- Status bar
 
 	-- General plugins
