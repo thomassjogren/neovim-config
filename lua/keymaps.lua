@@ -41,12 +41,11 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":lua require('user.telescope').project_files()<cr>", opts)
-keymap("n", "<leader>fg", ":lua require('telescope.builtin').live_grep()<cr>", opts)
-keymap("n", "<leader>fb", ":lua require('telescope.builtin').buffers()<cr>", opts)
-keymap("n", "<leader>fh", ":lua require('telescope.builtin').help_tags()<cr>", opts)
-keymap("n", "<leader>p", ":lua require('telescope.builtin').find_files()<cr>", opts)
-keymap("n", "<C-p>", ":lua require('telescope.builtin').find_files()<cr>", opts)
-keymap("n", "<leader>nc", ":lua require('user.telescope').nvim_config()<cr>", opts)
+keymap("n", "<leader>sg", ":lua require('telescope.builtin').live_grep()<cr>", opts)
+keymap("n", "<leader>sb", ":lua require('telescope.builtin').buffers()<cr>", opts)
+keymap("n", "<leader>sh", ":lua require('telescope.builtin').help_tags()<cr>", opts)
+keymap("n", "<leader>sf", ":lua require('telescope.builtin').find_files()<cr>", opts)
+keymap("n", "<leader>sc", ":lua require('user.telescope').nvim_config()<cr>", opts)
 
 -- Terminal
 keymap("n", "<leader>tt", ":ToggleTerm<cr>", opts)
