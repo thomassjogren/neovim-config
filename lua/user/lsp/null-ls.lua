@@ -15,10 +15,11 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		-- formatting.prettier.with { extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } },
-		formatting.eslint_d,
+		formatting.prettier,
+		-- formatting.eslint_d,
 		formatting.stylua,
 		formatting.terraform_fmt,
-		diagnostics.eslint_d,
+		-- diagnostics.eslint_d,
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)

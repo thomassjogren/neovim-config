@@ -57,7 +57,7 @@ return {
 	"williamboman/mason-lspconfig.nvim", -- Integration with LSP config
 
 	"jose-elias-alvarez/null-ls.nvim", -- Configure formatters & linters
-	"jayp0521/mason-null-ls.nvim", -- Bridges gap b/w Mason & null-ls
+	"jay-babu/mason-null-ls.nvim", -- Bridges gap b/w Mason & null-ls
 
 	"neovim/nvim-lspconfig", -- Enable and configure LSP
 	{ "glepnir/lspsaga.nvim", branch = "main" }, -- Enhanced LSP UIs
