@@ -20,6 +20,12 @@ null_ls.setup({
 		formatting.stylua,
 		formatting.terraform_fmt,
 		-- diagnostics.eslint_d,
+		formatting.golines.with({
+			extra_args = {
+				"--max-len=180",
+				"--base-formatter=gofmt",
+			},
+		}),
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)

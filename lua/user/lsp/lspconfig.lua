@@ -26,7 +26,7 @@ local on_attach = function(client, bufnr)
 	-- set keybinds
 	keymap("n", "gf", "<cmd>Lspsaga lsp_finder<cr>", bufopts) -- show definition, references
 	keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", bufopts) -- got to declaration
-	keymap("n", "gd", "<cmd>Lspsaga peek_definition<cr>", bufopts) -- see definition and make edits in window
+	keymap("n", "gd", vim.lsp.buf.definition, bufopts)
 	keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<cr>", bufopts) -- go to implementation
 	keymap("n", "<leader>ca", "<cmd>Lspsaga code_action<cr>", bufopts) -- see available code actions
 	keymap("n", "<leader>rn", "<cmd>Lspsaga rename<cr>", bufopts) -- smart rename
@@ -98,6 +98,11 @@ lspconfig["cssls"].setup({
 })
 
 lspconfig["phpactor"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["gopls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })

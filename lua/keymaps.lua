@@ -21,6 +21,7 @@ keymap("n", "<leader>bn", ":bn<cr>", opts)
 keymap("n", "<leader>bp", ":bp<cr>", opts)
 keymap("n", "<leader>bd", ":bd<cr>", opts)
 keymap("n", "<leader>bl", ":buffers<cr>", opts)
+keymap("n", "<leader>gb", ":b#<cr>", opts)
 
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)

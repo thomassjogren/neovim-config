@@ -74,11 +74,4 @@ cmp.setup({
 			ellipsis_char = "...",
 		}),
 	},
-	experimental = {
-		-- Some new menu?
-		native_menu = false,
-
-		-- Display inline text when autocompletion
-		ghost_text = true,
-	},
 })
