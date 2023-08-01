@@ -19,7 +19,6 @@ return {
 	"ur4ltz/surround.nvim", -- Add, update or delete surrounding characers
 	"lewis6991/gitsigns.nvim", -- Git diff in the gutter
 	"nvim-tree/nvim-tree.lua", -- Simple file explorer
-	"TimUntersberger/neogit", -- Magit clone from Neovim
 	{
 		"nathom/filetype.nvim", -- Filetype bindings
 		config = function()
